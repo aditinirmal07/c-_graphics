@@ -1,0 +1,53 @@
+#include<graphics.h>
+
+
+using namespace std;
+
+main()
+{
+	initwindow(1500,1000);
+	
+	//red rectangle
+	setcolor(4);                             //red-4
+	setfillstyle(SOLID_FILL,4);
+	rectangle(345,300,445,400);
+	floodfill( 346,301,4);                           
+	
+	
+	
+	//blue rectanle
+	setcolor(1); 
+	setfillstyle(SOLID_FILL,1);
+	rectangle(345,410,445,510);
+	floodfill(346,411,1);
+	
+	
+	//green rectanle
+	setcolor(2);
+	setfillstyle(SOLID_FILL,2); 
+	rectangle(455,300,555,400);
+	floodfill(456,301,2);	
+	
+	
+	
+	//yellow rectanle
+	setcolor(14); 
+	setfillstyle(SOLID_FILL,14);
+	rectangle(455,410,555,510);
+	floodfill(456,411,14);
+	
+	
+	//text
+	settextstyle(1,0,80);
+	setcolor(15);
+	outtextxy(560,350,"Microsoft");
+	
+
+	
+	
+	
+	
+	
+	
+	getch();
+}
