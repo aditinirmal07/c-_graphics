@@ -1,0 +1,36 @@
+#include<iostream>
+#include<graphics.h>
+
+using namespace std;
+
+
+int main()
+{
+    //	int gd,gm;
+	//initgraph(& gd, & gm,"");
+    initwindow(1000,1000);
+    
+    settextstyle(9,0,10);
+	setcolor(1);
+	setbkcolor(15);
+	outtextxy(230,230,"G");
+	
+	
+    setcolor(4);
+    outtextxy(350,230,"o");
+    
+    setcolor(14);
+    outtextxy(440,230,"o");
+	
+	setcolor(1);
+    outtextxy(530,230,"g");
+	
+	setcolor(2);
+    outtextxy(620,230,"l");
+	
+	setcolor(4);
+    outtextxy(670,230,"e");
+    
+	
+	getch();
+}
