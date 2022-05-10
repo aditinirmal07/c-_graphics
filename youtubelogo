@@ -1,0 +1,49 @@
+#include<graphics.h>
+
+
+
+main()
+{
+	initwindow(1500,1500);
+	
+	
+//	ellipse(750,350,0,360,180,100);
+	//outer circle
+	setcolor(15);
+	setfillstyle(SOLID_FILL,15);
+	circle(750,351,190);
+	floodfill(750,351,15);
+	
+	
+  /* setcolor(12);	
+   setfillstyle(SOLID_FILL,12);
+	rectangle(610,280,890,420);
+	floodfill(611,285,12);*/
+	
+	setcolor(4);	
+   setfillstyle(SOLID_FILL,4);
+	rectangle(610,280,890,420);
+	floodfill(611,285,4);
+	
+	
+	
+	setcolor(15);
+	for(int i=0;i<=11;i++)
+	{
+	
+	ellipse(750,350,0,360,180+i,100);
+	
+   }
+	
+	int poly[]={710,300,710,400,800,350,710,300};
+	setfillstyle(SOLID_FILL,15);
+	drawpoly(4,poly);
+	fillpoly(4,poly);
+	
+	settextstyle(1,0,7);
+	outtextxy(560,570,"YouTube");
+//	closegraph();
+	getch();
+	
+	
+}
