@@ -1,0 +1,195 @@
+#include<iostream>
+#include<graphics.h>
+
+using namespace std;
+
+
+int main()
+{
+//	int gd,gm;
+//	initgraph(& gd, & gm,"");
+    initwindow(1000,750);
+	
+	
+	
+	//big circle
+	setcolor(3);               //cyan=3
+	setfillstyle(SOLID_FILL,3);
+	circle(500,150,100);
+	floodfill(500,150,3);
+	
+	
+	//small circle
+	setcolor(15);
+	setfillstyle(SOLID_FILL,15);           //white=15
+	circle(500,165,85);
+	floodfill(500,165,15);	
+	
+	
+	setcolor(0);
+	//righht mishi
+	line(520,165,550,145);
+	line(520,175,560,175);
+	line(520,185,550,195);
+	
+	//left mishi
+	line(480,165,450,145);
+	line(480,175,440,175);
+	line(480,185,450,195);
+//	ellipse(500,250,0,180,90,180);
+	
+
+
+
+    //eye
+	setcolor(0);
+	
+//	circle(480,95,20);
+//	circle(520,95,20);
+	setfillstyle(SOLID_FILL,15);
+	fillellipse(480,100,19,30);
+//	floodfill(480,100,15);
+	
+	setcolor(0);
+	setfillstyle(SOLID_FILL,15);
+	fillellipse(520,100,19,30);
+//	floodfill(520,100,15);
+	
+	
+	//inner color eye
+	setcolor(0);
+	setfillstyle(SOLID_FILL,0);
+	fillellipse(485,100,10,19);
+	fillellipse(515,100,10,19);
+	
+	
+	
+	// most inner eye
+	setcolor(15);
+	setfillstyle(SOLID_FILL,15);
+	fillellipse(488,105,5,9);
+	fillellipse(512,104,5,9);
+	
+	
+	
+	//NOSE
+	setcolor(4);
+	setfillstyle(SOLID_FILL,4);
+	circle(500,150,10);
+    floodfill(500,150,4);
+	//under nose line
+	
+	
+	setcolor(0);
+	circle(500,150,10);
+	ellipse(500,160,200,340,70,70);
+	line(500,160,500,230);            //under nose line
+	
+	
+	
+	//small rectangle
+	setcolor(4);                     //red
+	setfillstyle(SOLID_FILL,4);
+	rectangle(405,245,585,260);      //small rectangle
+	floodfill(406,246,4);
+	
+	setcolor(14);
+	setfillstyle(SOLID_FILL,14);
+	circle(500,255,10);
+	floodfill(500,255,14);
+	
+	setcolor(0);
+	circle(500,255,10);
+	circle(500,255,2);
+	
+	
+	// big rectangle
+	setcolor(3);                     //cyan
+	setfillstyle(SOLID_FILL,3);
+	rectangle(420,260,580,380);     // big rectangle
+	floodfill(421,261,3);
+	
+	
+	//leg
+	setcolor(15);    //black color
+	setfillstyle(SOLID_FILL,15);
+	circle(460,380,25);
+	floodfill(460,380,15);
+	
+
+	setfillstyle(SOLID_FILL,15);
+	circle(540,380,25);
+	floodfill(540,380,15);
+	
+	setcolor(0); 
+	circle(460,380,25);
+    circle(540,380,25);
+	
+	
+	//pocket
+	setcolor(15);
+	setfillstyle(SOLID_FILL,15);
+	ellipse(500,270,170,370,70,90);     //innrer ellipse in rectangle
+	line(430,260,570,260);
+	floodfill(500,270,15);
+	
+	setcolor(0);
+	ellipse(500,270,170,370,70,90);
+	
+	//pocket
+	setcolor(0);
+	line(450,290,550,290);
+	arc(500,290,180,360,50);
+	
+	
+	
+	//hand left
+
+	int left[]={420,260,360,310,380,330,420,295,420,260};
+	setcolor(3);
+	setfillstyle(SOLID_FILL,3);
+	drawpoly(5,left);
+	fillpoly(5,left);
+
+	
+	
+	//circle()
+	setcolor(15);
+	setfillstyle(SOLID_FILL,15);
+	circle(370,320,20);
+	floodfill(370,320,15);	
+	setcolor(0);
+	circle(370,320,20);
+	
+	
+	
+	//right hand
+	
+	
+	
+	int right[]={580,260,640,310,620,330,580,295,580,260};
+	setcolor(3);
+	setfillstyle(SOLID_FILL,3);
+	drawpoly(5,right);
+	fillpoly(5,right);
+	
+		
+	
+	
+	//circle
+	setcolor(15);
+	setfillstyle(SOLID_FILL,15);
+	circle(630,320,20);
+	floodfill(630,320,15);
+	setcolor(0);
+	circle(630,320,20);
+	
+	settextstyle(9,0,5);
+	setcolor(15);
+	setbkcolor(0);
+	outtextxy(300,450,"*DORAEMON*");
+	
+		
+	getch();
+	
+} 
